@@ -1,0 +1,260 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "6dbcee31-7269-4e5f-910d-c67585433c98",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# zeros(shape,dtype(default float),order = 'C') #fixed arguments"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "7537419c-9bd3-46aa-9925-8b71f7038d9d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[0 0]\n",
+      " [0 0]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "data = np.zeros((2,2),dtype=int)\n",
+    "print(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "858c951f-3680-4f8c-b7f2-23a256887fe2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[[0 0 0]\n",
+      "  [0 0 0]]\n",
+      "\n",
+      " [[0 0 0]\n",
+      "  [0 0 0]]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "data = np.zeros((2,2,3),dtype=int)\n",
+    "print(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "76c78348-2eda-4954-ba7a-87b44b928346",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[[[0 0]\n",
+      "   [0 0]\n",
+      "   [0 0]]\n",
+      "\n",
+      "  [[0 0]\n",
+      "   [0 0]\n",
+      "   [0 0]]\n",
+      "\n",
+      "  [[0 0]\n",
+      "   [0 0]\n",
+      "   [0 0]]]\n",
+      "\n",
+      "\n",
+      " [[[0 0]\n",
+      "   [0 0]\n",
+      "   [0 0]]\n",
+      "\n",
+      "  [[0 0]\n",
+      "   [0 0]\n",
+      "   [0 0]]\n",
+      "\n",
+      "  [[0 0]\n",
+      "   [0 0]\n",
+      "   [0 0]]]\n",
+      "\n",
+      "\n",
+      " [[[0 0]\n",
+      "   [0 0]\n",
+      "   [0 0]]\n",
+      "\n",
+      "  [[0 0]\n",
+      "   [0 0]\n",
+      "   [0 0]]\n",
+      "\n",
+      "  [[0 0]\n",
+      "   [0 0]\n",
+      "   [0 0]]]]\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "data = np.zeros((3,3,3,2),dtype=int)\n",
+    "print(data)\n",
+    "print(data.ndim)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "76ef7f97-a077-441f-8fef-a231d3cb31c1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# ones (shape,dtype=float)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "520582e0-7276-421d-8ac5-35d7cea080c4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[1 1]\n",
+      " [1 1]\n",
+      " [1 1]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "data = np.ones((3,2),dtype=int)\n",
+    "print(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "123c6232-85c9-46f1-af53-d8a552be1f34",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[['he' 'he' 'he']\n",
+      " ['he' 'he' 'he']\n",
+      " ['he' 'he' 'he']]\n"
+     ]
+    }
+   ],
+   "source": [
+    "data = np.full((3,3),'hello',dtype = 'U2')\n",
+    "print(data)                                    #U2 - unicode"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "b7223705-7bda-4f35-9c99-798052d1dc9c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[1 0 0 0]\n",
+      " [0 1 0 0]\n",
+      " [0 0 1 0]\n",
+      " [0 0 0 1]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "data = np.identity(4 ,dtype=int)\n",
+    "print(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "3a0f3b1a-6804-48d0-b03e-8587cdefb4f6",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[ 0  1  2  3  4  5  6  7  8  9 10 11]\n",
+      "[[ 0  3  6  9]\n",
+      " [ 1  4  7 10]\n",
+      " [ 2  5  8 11]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "data = np.arange(12)\n",
+    "re_data = np.reshape(data,(3,4),order = 'F')        #order can be changed in reshape function\n",
+    "print(data)\n",
+    "print(re_data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2954e6cf-1a8d-4802-8fd7-07361b4ce562",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bbab3ab1-5705-466d-8ccf-e97bc4989d3e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "985c57d7-83fc-49a1-983a-91261f624680",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
